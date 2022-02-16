@@ -40,7 +40,7 @@ export default function App() {
         <header>
           {/* if there's a user, render a logout button here */}
           {
-            user && <button>logout</button>
+            user && <button onClick={handleLogout}>logout</button>
           }
         </header>
         <main>
