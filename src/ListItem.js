@@ -13,14 +13,14 @@ export default function ListItem({ fetchItems, listItem }) {
   return (
     // on click, if it's already been bought, do nothing; otherwise, call the handleClick function
     <div className='list-item'
-      onClick={
+      onClick={() =>
         listItem.has_been_bought === true 
           ? () => {}
           : handleClick()
       }>
       {/* if it's been bought, this p tag should have the 'bought' class. Otherwise it should have the 'needed' class */}
-      <p className={`${listItem.has_been_bought ? 'bought' : 'needed'}`}>{listItem.name}</p>
-      <p className={`${listItem.has_been_bought ? 'bought' : 'needed'}`}>{listItem.quantity}</p>     
+      <p className={`${listItem.has_been_bought === true ? 'bought' : 'needed'}`}>{listItem.name}</p>
+      <p className={`${listItem.has_been_bought === true ? 'bought' : 'needed'}`}>{listItem.quantity}</p>     
     </div>
   );
 }
