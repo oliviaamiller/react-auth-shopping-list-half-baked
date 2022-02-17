@@ -12,7 +12,8 @@ export default function ListItemForm({ fetchItems }) {
     // make a new list item in supabase using the form values stored in state
     await createListItem({
       name,
-      quantity
+      quantity,
+      has_been_bought: false,
     });
 
     // refetch the items using the handler function passed down as a prop

@@ -36,11 +36,10 @@ export default function ListPage() {
       <ListItemForm fetchItems={fetchItems} />
       <div className='item-list'>
         {/* map through all the list items and render them here */}
-        {listItems.map((item, i) =>
-          <div key={`${item}-${i}`}>
-            <p>{item.name}</p>
-            <p>{item.quantity}</p>
-          </div>)}
+        {listItems.map((listItem, i) =>
+          <ListItem key={`${listItem}-${i}`} 
+            listItem={listItem}/>)
+        }
       </div>
 
     </div>
