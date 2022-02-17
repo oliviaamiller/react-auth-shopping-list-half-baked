@@ -38,7 +38,8 @@ export default function ListPage() {
         {/* map through all the list items and render them here */}
         {listItems.map((listItem, i) =>
           <ListItem key={`${listItem}-${i}`} 
-            listItem={listItem}/>)
+            listItem={listItem}
+            fetchItems={fetchItems} />)
         }
       </div>
 
