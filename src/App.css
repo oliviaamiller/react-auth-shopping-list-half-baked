@@ -89,7 +89,11 @@ select {
 }
 
 .list-item {
-  width: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+.list-item p{
+  padding: .25rem;
 }
 
 
@@ -103,5 +107,6 @@ select {
 }
 
 .bought {
-  text-decoration: line-through;
+  text-decoration-line: line-through;
+  opacity: .6;
 }
