@@ -50,7 +50,7 @@ export default function App() {
               {
                 user
                   ? <Redirect to='/shopping-list' />
-                  : <AuthPage />
+                  : <AuthPage setUser={setUser}/>
               }
             </Route>
             <Route exact path="/shopping-list">
