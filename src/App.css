@@ -63,6 +63,7 @@ a {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
+  margin-top: 1rem;
 
 }
 
@@ -89,9 +90,14 @@ select {
 }
 
 .list-item {
-  width: fit-content;
+  display: flex;
+  flex-direction: row;
 }
 
+.list-item p{
+  margin: .5rem;
+  padding: 0;
+}
 
 .needed {
   cursor: pointer;
@@ -103,5 +109,6 @@ select {
 }
 
 .bought {
-  text-decoration: line-through;
+  text-decoration-line: line-through;
+  opacity: .6;
 }
